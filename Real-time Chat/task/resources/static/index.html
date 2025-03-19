@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="username-page">
+    <p class="username-form-title">Enter username:</p>
+    <form id="usernameForm">
+        <input type="text" id="input-username"/>
+        <button type="submit" id="send-username-btn" class="username-submit">Start Chatting</button>
+    </form>
+</div>
+<div id="chat-page" class="hidden">
+    <aside id="users-container">
+        <div class="userlist-wrapper">
+        <h3>Online Users</h3>
+        <ol id="users">
+        </ol>
+        </div>
+        <div id="chat-window">
+        <button id="public-chat-btn">Public chat</button>
+        </div>
+    </aside>
+    <div id="messages-container">
+        <h3 id="chat-with">Public chat</h3>
+        <ul id="messages">
+        </ul>
+        <form id="chatForm" name="chatForm">
+            <div id="chat">
+                <input type="text" id="input-msg" placeholder="type a message..." autocomplete="off"></input>
+                <button type="submit" id="send-msg-btn">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script defer type="module" src="master.js"></script>
+</body>
+</html>
